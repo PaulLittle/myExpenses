@@ -1,0 +1,24 @@
+﻿<Window x:Class="myExpenses.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myExpenses"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="Coral">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="lbxExpenses" Margin="10" Background="BlanchedAlmond" Foreground="CornflowerBlue" Grid.ColumnSpan="2"></ListBox>
+        <Button Name="button" Margin="10" Click="button_Click" FontSize="18" Grid.Row="1">Add Expense</Button>
+        <TextBlock Name="tbkTotalExpense" Margin="10" Foreground="Blue" VerticalAlignment="Center" FontSize="18" Grid.Row="1" Grid.Column="1"></TextBlock>
+    </Grid>
+</Window>
